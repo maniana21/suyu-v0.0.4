@@ -7547,7 +7547,7 @@ void GMainWindow::HideMouseCursor() {
 }
 
 void GMainWindow::ShowMouseCursor() {
-    render_window->unsetCursor();
+    render_window->setCursor(QCursor(Qt::ArrowCursor));
 
     // Only auto-hide the cursor while actually in fullscreen gameplay.
     // In windowed/UI mode (for example after F11), keep it visible.
